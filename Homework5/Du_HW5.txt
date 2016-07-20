@@ -1,0 +1,54 @@
+1. Which of the followings is considered boxing?
+
+a. double dblx = fx;
+b. float fx = ix;
+c. object myobjx = fx;
+d. int ix = objy;
+
+- my answer is c.
+
+2. Which of the followings is considered unboxing?
+
+a. string str = ix.ToString();
+b. double dblx =(double) fx;
+c. object myobjx = fx;
+d. int ix = (int) objy;
+
+- my answer is d.
+
+3. Object objdblx is of type double. Assign the value of this object to a variable of type float.
+
+float fx = (float)(double)objdblx;
+
+4. Object objflx is of type float. Assign the value of this object o another variable of type double.
+
+double dx = (double)(float)objflx;
+
+5. Convert the string strx to a double dblx:
+
+double dblx = Convert.ToDouble(strx);    or  (double)strx;
+
+6. Convert the integer ix to a float fx:
+
+float fx = Convert.ToSingle(ix);     or  (float)ix;
+
+7. Convert the double dblx to a string strx:
+
+string strx = Convert.ToString(dblx);     or (string)dblx;
+
+8. Object is the   base   class of all other data types.
+
+9. What is an object (the definition)?
+
+- An object is a block of memory that has been allocated according to the blueprint. 
+An object is like a box so that it can contain any kinds of data type even if in an array or collection, 
+and a program may create multiple objects in same class. 
+
+10. How do you declare an object in C#?
+
+What is the difference between an object and a variable?
+
+- Object can be declared by  object myObj = something;   
+However, name of object can be anything if we want like Dog mydog = new Dog();
+A variable is like a piece of a paper so it only has one value with it but we can erase and write another value on it. 
+However, an object is like a box so we can put many variables in the same object. 
