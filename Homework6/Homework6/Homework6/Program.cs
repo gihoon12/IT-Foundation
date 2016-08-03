@@ -8,76 +8,72 @@ namespace Homework6
 {
     class Television
     {
-        public int Volume = 0;
-        public int Channel = 0;
-        public bool IsOn = false;
+        private int channel = 0;
+        private int volume = 0;
+        private bool isOn = false;
 
-        public void TurnOn()
+        public bool IsOn
         {
-            IsOn = true;
-            // do the code to turn the tv on
-        }
-        public void TurnOff()
-        {
-            IsOn = false;
-            // do the code to turn the tv off
-        }
-
-        public int CurrentVolume()
-        {
-            return Volume;
-        }
-        public void IncreaseVolume()
-        {
-            if (Volume < 100)
+            get
             {
-                Volume = Volume + 1;
-                // do the code to increase the volume
+                return isOn;
             }
-        }
-        public void DecreaseVolume()
-        {
-            if (Volume > 0)
+            set
             {
-                Volume = Volume - 1;
-                // do the code to decrease the volume
+                isOn = value;
             }
         }
 
-        public int CurrentChannel()
+        public int Volume
         {
-            return Channel;
-        }
-        public void ChangeChannel(int channel)
-        {
-            if (Channel > 0 && Channel < 50)
+            get
             {
-                Channel = channel;
-                // do the code to change the
-                // channel on the tv
+                return volume;
+            }
+            set
+            {
+                if (volume <= 100 && volume >= 0)
+                {
+                    volume = value;
+                }
             }
         }
-    }
 
-    class TestTV
-    {
-        static void Main()
+        public int Channel
         {
-            Television tv = new Television();
-
-            if (!tv.IsOn)
+            get
             {
-                tv.IsOn = true;
+                return channel;
             }
+            set
+            {
+                if (value > 0 && value < 50)
+                {
+                    channel = value;
+                }
+            }
+        }
 
-            tv.Channel = 3;
+        class TestTV
+        {
+            static void Main()
+            {
+                Television tv = new Television();
 
-            tv.Volume++;
-            tv.Volume++;
-            tv.Volume++;
-            tv.Volume++;
+                if (!tv.IsOn)
+                {
+                    tv.IsOn = true;
+                }
 
-            tv.IsOn = false;
+                tv.Channel = 3;
+
+                tv.Volume++;
+                tv.Volume++;
+                tv.Volume++;
+                tv.Volume++;
+
+                tv.IsOn = false;
+            }
         }
     }
 }
